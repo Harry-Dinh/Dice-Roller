@@ -11,16 +11,12 @@ struct DiceView: View {
     
     var dice: Dice
     
-    private let fontSize: CGFloat = 100
-    
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .foregroundStyle(.quaternary)
-                .frame(width: fontSize + 50, height: fontSize + 50)
+        GroupBox {
             Text("\(dice.value)")
-                .fontDesign(.monospaced)
-                .font(.system(size: fontSize))
+                .fontDesign(.rounded)
+                .font(.largeTitle)
+                .frame(width: 60, height: 60)
         }
     }
 }
